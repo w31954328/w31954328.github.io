@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>疫情追踪</title>
+    <script src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/echarts-all-3.js"></script>
+    <script src="../static/js/echarts.js"></script>
+    <script src="../static/js/world.js"></script>
+    <link rel="stylesheet" href="../static/css/page1.css" rel="stylesheet">
+</head>
+<body>
+    <div id="title" style=" font-weight: bold;">美国新冠肺炎疫情可视分析系统</div>
+    <div id="time" style="font-size:25px; text-align:center;">时间</div>
+    <div class="my">
+     <ul>
+         <li><a href="{{ url_for('my_tem') }}" >美国疫情态势</a></li>
+         <li><a href="{{ url_for('page1') }}" style="color: red">各州疫情查询</a></li>
+         <li><a href="{{ url_for('page2') }}">传播模式及预测</a></li>
+         <li><a href="{{ url_for('page3') }}">疫苗接种分析</a></li>
+    </ul>
+        </div>
+    <div id="page1_l1">
+    <div class="sub">累计病例数据</div>
+        <div class="txt">确诊</div>
+        <div class="txt">死亡</div>
+        <div class="number11">100</div>
+        <div class="number22">100</div>
+    </div>
+    <div id="page1_l2">病死率</div>
+    <div id="page1_l3">
+        <div class="sub">较昨日新增</div>
+        <div class="txt">确诊</div>
+        <div class="txt">死亡</div>
+        <div class="number_11">100</div>
+        <div class="number_22">100</div>
+    </div>
+    <div id="page1_l4">
+        <div id="page1_l4_select" style="color: white">
+            选择模式:
+          <select id="comp_select" name="comp_select">
+              <option value="1" selected="selected">累计确诊</option>
+              <option value="2">累计死亡</option>
+          </select>
+            <button id="button" onclick="get_page1_l5_data()">确定</button>
+        </div>
+    </div>
+
+    <div id="page1_l5">美国地图</div>
+    <div id="page1_l6">左下角各州确诊趋势</div>
+    <div id="page1_l7">右下角各州死亡趋势</div>
+    <div id="page1_r1">各(州/县)疫情数据排名</div>
+    <div id="page1_r2">按确诊人数排名</div>
+    <div id="page1_r3">按死亡人数排名</div>
+
+    <script src="../static/js/controller_time.js"></script>
+
+    <script src="../static/js/page1_ec_l2.js"></script>
+    <script src="../static/js/page1_ec_l5.js"></script>
+    <script src="../static/js/page1_ec_l6.js"></script>
+    <script src="../static/js/page1_ec_l7.js"></script>
+    <script src="../static/js/page1_ec_r2.js"></script>
+    <script src="../static/js/page1_ec_r3.js"></script>
+    <script src="../static/js/controller_page1.js"></script>
+
+</body>
+</html>
